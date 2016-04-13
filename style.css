@@ -13231,3 +13231,60 @@ body:not(.no-transition) #wrapper,
 .play-image-slider {
 	display: none;
 }
+
+
+.slick-arrow {
+	position: absolute;
+	top: 18%;
+	z-index: 10;
+	border-radius: 50%;
+	width: 30px;
+	height: 30px;
+	color: transparent;
+	border: none;
+	opacity: 0.4;
+	transition: opacity 0.3s ease;
+	background-size: cover;
+}
+
+.slick-arrow:hover {
+	opacity: 0.8;
+	transition: opacity 0.3s ease;
+}
+
+.slick-arrow.slick-next {
+	left: -10px;
+	transform: translateX(-100%);
+	background-image: url('images/modules/testimonial/prev.png');
+
+}
+
+.slick-arrow.slick-prev {
+	right: -10px;
+	transform: translateX(100%);
+	background-image: url('images/modules/testimonial/next.png');
+
+}
+
+@media (max-width: 767px) {
+	.slick-slider {
+		margin: 0 20px;
+	}
+}
+
+@media (max-width: 425px) {
+	.slick-slider {
+		margin: 0 20px;
+	}
+	.slick-arrow {
+		top: 12%;
+		width: 25px;
+		height: 25px;
+	}
+	.slick-arrow.slick-next {
+		left: 0px;
+	}
+	.slick-arrow.slick-prev {
+		right: 0px;
+	}
+}

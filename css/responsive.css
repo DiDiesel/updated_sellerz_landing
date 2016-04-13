@@ -2270,5 +2270,6 @@ only screen and (                min-resolution: 2dppx) and (max-width: 991px) {
 	}
 	#crew {
 		padding-bottom: 0px !important;
+
 	}
 }

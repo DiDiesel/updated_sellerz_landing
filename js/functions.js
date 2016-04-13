@@ -7,7 +7,7 @@ $.fn.inlineStyle = function (prop) {
 $.fn.doOnce = function( func ) {
 	this.length && func.apply( this );
 	return this;
-}
+};
 
 $.extend($.infinitescroll.prototype,{
 	_setup_portfolioinfiniteitemsloader: function infscr_setup_portfolioinfiniteitemsloader() {
@@ -27,7 +27,7 @@ $.extend($.infinitescroll.prototype,{
 				.show(opts.loading.speed, function () {
 					instance.beginAjax(opts);
 				});
-		}
+		};
 	},
 	_showdonemsg_portfolioinfiniteitemsloader: function infscr_showdonemsg_portfolioinfiniteitemsloader () {
 		var opts = this.options,
@@ -52,8 +52,7 @@ $.extend($.infinitescroll.prototype,{
 	var vendors = ['ms', 'moz', 'webkit', 'o'];
 	for(var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
 		window.requestAnimationFrame = window[vendors[x]+'RequestAnimationFrame'];
-		window.cancelAnimationFrame = window[vendors[x]+'CancelAnimationFrame']
-									|| window[vendors[x]+'CancelRequestAnimationFrame'];
+		window.cancelAnimationFrame = window[vendors[x]+'CancelAnimationFrame']	|| window[vendors[x]+'CancelRequestAnimationFrame'];
 	}
 
 	if (!window.requestAnimationFrame)
@@ -2667,3 +2666,36 @@ var SEMICOLON = SEMICOLON || {};
 	$window.on( 'resize', SEMICOLON.documentOnResize.init );
 
 })(jQuery);
+
+$(document).ready(function() {
+	$('.responsive-slide').slick({
+	  dots: false,
+	  infinite: true,
+	  speed: 700,
+	  slidesToShow: 1,
+	  slidesToScroll: 1,
+		autoplay: true,
+  	autoplaySpeed: 2500,
+		pauseOnHover: true,
+	  responsive: [
+	    {
+	      breakpoint: 5000,
+	      settings: "unslick"
+	    },
+			{
+	      breakpoint: 767,
+				settings: {
+	        slidesToShow: 1,
+	        slidesToScroll: 1
+	      }
+	    }
+	    // You can unslick at a given breakpoint now by adding:
+	    // settings: "unslick"
+	    // instead of a settings object
+	  ]
+	});
+});
+
+$(window).resize(function() {
+  $('.responsive-slide').slick('resize');
+});
