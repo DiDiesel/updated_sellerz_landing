@@ -2257,6 +2257,11 @@ only screen and (                min-resolution: 2dppx) and (max-width: 991px) {
 }
 
 
+@media (min-width: 992px) {
+	.container {
+	  width: 990px;
+	}
+}
 @media (max-width: 767px) {
 	.content-wrap {
     position: relative;

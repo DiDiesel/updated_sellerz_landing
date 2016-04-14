@@ -1402,30 +1402,36 @@ var SEMICOLON = SEMICOLON || {};
 		},
 
 		sliderParallax: function(){
-			if( $sliderParallaxEl.length > 0 ) {
-				if( ( $body.hasClass('device-lg') || $body.hasClass('device-md') ) && !SEMICOLON.isMobile.any() ) {
-					var parallaxOffsetTop = SEMICOLON.slider.sliderParallaxOffset(),
-						parallaxElHeight = $sliderParallaxEl.outerHeight();
+			if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
 
-					if( ( parallaxElHeight + parallaxOffsetTop + 50 ) > $window.scrollTop() ){
-						if ($window.scrollTop() > parallaxOffsetTop) {
-							var tranformAmount = (($window.scrollTop()-parallaxOffsetTop) / 1.5 ).toFixed(2);
-							var tranformAmount2 = (($window.scrollTop()-parallaxOffsetTop) / 7 ).toFixed(2);
-							$sliderParallaxEl.stop(true,true).transition({ y: tranformAmount },0);
-							$('.slider-parallax .slider-caption,.ei-title').stop(true,true).transition({ y: -tranformAmount2 },0);
-						} else {
-							$('.slider-parallax,.slider-parallax .slider-caption,.ei-title').transition({ y: 0 },0);
-						}
-					}
-					if (requesting) {
-						requestAnimationFrame(function(){
-							SEMICOLON.slider.sliderParallax();
-							SEMICOLON.slider.sliderElementsFade();
-						});
-					}
-				} else {
-					$('.slider-parallax,.slider-parallax .slider-caption,.ei-title').transition({ y: 0 },0);
-				}
+			} else {
+
+				// if( $sliderParallaxEl.length > 0 ) {
+				// 	if( ( $body.hasClass('device-lg') || $body.hasClass('device-md') ) && !SEMICOLON.isMobile.any() ) {
+				// 		var parallaxOffsetTop = SEMICOLON.slider.sliderParallaxOffset(),
+				// 			parallaxElHeight = $sliderParallaxEl.outerHeight();
+				//
+				// 		if( ( parallaxElHeight + parallaxOffsetTop + 50 ) > $window.scrollTop() ){
+				// 			if ($window.scrollTop() > parallaxOffsetTop) {
+				// 				var tranformAmount = (($window.scrollTop()-parallaxOffsetTop) / 1.5 ).toFixed(2);
+				// 				var tranformAmount2 = (($window.scrollTop()-parallaxOffsetTop) / 7 ).toFixed(2);
+				// 				$sliderParallaxEl.stop(true,true).transition({ y: tranformAmount },0);
+				// 				$('.slider-parallax .slider-caption,.ei-title').stop(true,true).transition({ y: -tranformAmount2 },0);
+				// 			} else {
+				// 				$('.slider-parallax,.slider-parallax .slider-caption,.ei-title').transition({ y: 0 },0);
+				// 			}
+				// 		}
+				// 		if (requesting) {
+				// 			requestAnimationFrame(function(){
+				// 				SEMICOLON.slider.sliderParallax();
+				// 				SEMICOLON.slider.sliderElementsFade();
+				// 			});
+				// 		}
+				// 	} else {
+				// 		$('.slider-parallax,.slider-parallax .slider-caption,.ei-title').transition({ y: 0 },0);
+				// 	}
+				// }
+
 			}
 		},
 
