@@ -2,20 +2,100 @@
   display: none;
 }
 
+.hide-on-desktop {
+  display: none;
+}
+
+#content > .content-wrap, #crew {
+  padding-bottom: 0px;
+}
+
+.slider-caption {
+  top: 35% !important;
+  transition: translateX(-50%);
+}
+
+.slider-caption p:first-of-type {
+  margin-bottom: 10px;
+  font-family: 'Quantico', sans-serif;
+  font-size: 42px;
+}
+
+#slider .slider-caption p.heading-hero {
+  font-family: 'Quantico', sans-serif;
+  font-weight: bold !important;
+}
+
+.icon-redneck::before {
+  content: " ";
+  background-image: url("../images/home/Redneck-Anything-gray.svg");
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 29px;
+  height: 25px;
+}
+
+.icon-redneck::before {
+  background-image: url("../images/home/Redneck-Anything-gray.svg");
+}
+
+.icon-redneck:hover::after {
+  xbackground-image: url("../images/home/Redneck-Anything.svg");
+}
+
+.fbox-effect:hover .icon-redneck::before {
+  background-image: url("../images/home/Redneck-Anything.svg");
+}
+
+.buttonIcons-grid .col_one_fourth h3 span {
+  font-family: 'Karla', sans-serif;
+}
+
 #browse-market {
   display: none;
 }
 
 /* RESPONSIVE */
+@media (max-width: 768px) {
+  .swiper-slide {
+    background-position: 10% 18% !important;
+    background-size: 165% !important;
+    background-attachment: inherit !important;
+  }
+}
+
 @media (max-width: 767px) {
   .hide-on-mobile {
     display: none;
+  }
+  .hide-on-desktop {
+    display: inherit;
+  }
+  .sign-up {
+    padding: 0 !important;
+    padding-bottom: 50px !important;
+  }
+  #header-wrap .container {
+    width: 100% !important;
+  }
+  #logo, #logo img {
+    height: 55px;
+  }
+  #primary-menu-trigger {
+    top: 2px;
   }
   .swiper_wrapper:not(.force-full-screen), .swiper_wrapper:not(.force-full-screen):not(.canvas-slider-grid) .swiper-slide, .ei-slider {
     height: 244px !important;
   }
   .content-wrap, .section {
     padding: 50px 0;
+  }
+  #slider .slider-caption {
+    top: 15% !important;
   }
   #slider .slider-caption p {
     display: block !important;
@@ -28,21 +108,26 @@
   #slider .slider-caption p.heading-hero {
     font-family: 'Quantico', sans-serif;
     font-size: 22px;
+    font-weight: bold;
   }
   #slider .slider-caption .button {
     margin-top: 20px;
     background-color: #DA0000;
     border-color: #DA0000 !important;
     font-family: 'Karla', sans-serif;
-    font-weight: 300;
+    font-weight: 700;
     padding: 0 18px;
     font-size: 16px;
     height: 44px;
     line-height: 40px;
   }
+  #slider .slider-caption .button:hover {
+    opacity: 0.8;
+  }
   #slider .swiper-slide {
     background-position: 10% 18% !important;
-    background-size: 120% !important;
+    background-size: 140% !important;
+    background-attachment: inherit !important;
   }
   #slider .container {
     width: 100% !important;
@@ -55,6 +140,11 @@
     -webkit-transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
+    transition: opacity 0.6s ease;
+    cursor: pointer;
+  }
+  .playButton-gray:hover {
+    opacity: 0.8;
   }
   #content .container {
     width: 100% !important;
@@ -93,37 +183,42 @@
             flex-wrap: wrap;
     margin-bottom: 26px;
   }
-  .buttonIcons-grid .col_one_third {
+  .buttonIcons-grid .col_one_fourth {
     -webkit-flex-grow: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
     width: 50%;
     margin-bottom: 24px !important;
   }
-  .buttonIcons-grid .col_one_third h3 {
+  .buttonIcons-grid .col_one_fourth h3 {
     font-size: 14px;
     color: #030303;
     letter-spacing: -0.34px;
     padding: 0 15px;
   }
-  .buttonIcons-grid .col_one_third h3 span {
-    /* Diesel Enthusiast Ap Copy: */
-    font-family: Karla-Regular;
+  .buttonIcons-grid .col_one_fourth h3 span {
+    font-family: 'Karla', sans-serif;
     font-size: 14px;
     color: #030303;
     letter-spacing: -0.34px;
     line-height: 20px;
   }
-  .buttonIcons-grid .col_one_third .fbox-icon {
+  .buttonIcons-grid .col_one_fourth .fbox-icon {
     width: 80px;
     height: 80px;
     margin: 0 auto 15px;
   }
-  .buttonIcons-grid .col_one_third .fbox-icon i {
+  .buttonIcons-grid .col_one_fourth .fbox-icon i {
     background-color: #333333;
     color: #fff;
     font-size: 38px;
     line-height: 78px !important;
+  }
+  .buttonIcons-grid .col_one_fourth .fbox-icon .icon-redneck::before {
+    background-image: url("../images/home/Redneck-Anything.svg");
+  }
+  .buttonIcons-grid .col_one_fourth .fbox-icon .icon-redneck:hover::before {
+    background-image: url("../images/home/Redneck-Anything.svg");
   }
   #builds h2 {
     font-size: 22px;
@@ -173,6 +268,7 @@
     border-radius: 3px;
     width: 46%;
     margin: 0 2%;
+    padding: 0;
   }
   #tv-show h2 {
     font-size: 22px;
@@ -202,8 +298,12 @@
   #tv-show .landing-video {
     top: 0;
     width: 100%;
-    height: 210px;
+    height: auto;
     margin: 0;
+    margin-bottom: 20px;
+  }
+  #tv-show ul {
+    display: none;
   }
   #crew .heading-block h2 {
     font-size: 22px;
@@ -268,10 +368,38 @@
   }
 }
 
+@media (max-width: 425px) {
+  #portfolio .portfolio-item {
+    width: 50% !important;
+    height: 125px !important;
+  }
+  .swiper-slide {
+    background-position: 10% 18% !important;
+    background-size: 140% !important;
+    background-attachment: inherit !important;
+  }
+}
+
+@media (max-width: 375px) {
+  #portfolio .portfolio-item {
+    width: 50% !important;
+    height: 110px !important;
+  }
+  #browse-market .button {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 320px) {
+  #portfolio .portfolio-item {
+    width: 50% !important;
+    height: 95px !important;
+  }
+}
+
 .slick-arrow {
-  display: none !important;
   position: absolute;
-  top: 18%;
+  top: 24%;
   z-index: 10;
   border-radius: 50%;
   width: 30px;
@@ -281,6 +409,26 @@
   opacity: 0.4;
   transition: opacity 0.3s ease;
   background-size: cover;
+  background-color: transparent;
+  display: inline-block;
+  font-family: 'font-icons';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: inherit;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 26px;
+}
+
+.slick-arrow:before {
+  width: 100%;
+  height: 100%;
+  color: black;
+  line-height: 20px;
+  position: absolute;
 }
 
 .slick-arrow:hover {
@@ -288,25 +436,35 @@
   transition: opacity 0.3s ease;
 }
 
-.slick-arrow.slick-next {
+.slick-arrow.slick-prev {
   left: -10px;
   -webkit-transform: translateX(-100%);
       -ms-transform: translateX(-100%);
           transform: translateX(-100%);
-  background-image: url("images/modules/testimonial/prev.png");
 }
 
-.slick-arrow.slick-prev {
+.slick-arrow.slick-prev:before {
+  content: "\e7a4";
+  left: -2px;
+  top: 4px;
+}
+
+.slick-arrow.slick-next {
   right: -10px;
   -webkit-transform: translateX(100%);
       -ms-transform: translateX(100%);
           transform: translateX(100%);
-  background-image: url("images/modules/testimonial/next.png");
+}
+
+.slick-arrow.slick-next:before {
+  content: "\e7a5";
+  left: 2px;
+  top: 4px;
 }
 
 @media (max-width: 767px) {
   .slick-slider {
-    xmargin: 0 20px;
+    margin: 0 40px;
   }
 }
 
@@ -315,14 +473,14 @@
     margin: 0 20px;
   }
   .slick-arrow {
-    top: 12%;
+    top: 19%;
     width: 25px;
     height: 25px;
   }
-  .slick-arrow.slick-next {
+  .slick-arrow.slick-prev {
     left: 0px;
   }
-  .slick-arrow.slick-prev {
+  .slick-arrow.slick-next {
     right: 0px;
   }
 }

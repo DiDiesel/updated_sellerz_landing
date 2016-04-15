@@ -4,14 +4,109 @@ $red: #DA0000;
   display: none;
 }
 
+.hide-on-desktop {
+  display: none;
+}
+
+#content > .content-wrap, #crew {
+  padding-bottom: 0px;
+}
+
+.slider-caption  {
+  top: 35% !important;
+  transition: translateX(-50%);
+  p:first-of-type {
+    margin-bottom: 10px;
+    font-family: 'Quantico', sans-serif;
+    font-size: 42px;
+  }
+
+}
+
+#slider  {
+  .slider-caption {
+    p {
+      &.heading-hero {
+        font-family: 'Quantico', sans-serif;
+        font-weight: bold !important;
+      }
+    }
+  }
+}
+
+.icon-redneck::before {
+  content: " ";
+  background-image: url('../images/home/Redneck-Anything-gray.svg');
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 29px;
+  height: 25px;
+}
+.icon-redneck {
+  &::before {
+    background-image: url('../images/home/Redneck-Anything-gray.svg');
+  }
+  &:hover::after {
+    xbackground-image: url('../images/home/Redneck-Anything.svg');
+  }
+}
+.fbox-effect:hover {
+  .icon-redneck::before {
+    background-image: url('../images/home/Redneck-Anything.svg');
+  }
+}
+.buttonIcons-grid {
+  .col_one_fourth {
+    h3 {
+      span {
+        font-family: 'Karla', sans-serif;
+      }
+    }
+  }
+}
+
 #browse-market {
   display: none;
 }
 /* RESPONSIVE */
+@media (max-width: 768px) {
+  .swiper-slide {
+    background-position: 10% 18% !important;
+    background-size: 165% !important;
+    background-attachment: inherit !important;
+  }
+}
+
+
 
 @media (max-width: 767px) {
+
+
   .hide-on-mobile {
     display: none;
+  }
+
+  .hide-on-desktop {
+    display: inherit;
+  }
+
+  .sign-up {
+    padding: 0 !important;
+    padding-bottom: 50px !important;
+  }
+
+  #header-wrap {
+    .container {
+      width: 100% !important;
+    }
+  }
+  #logo, #logo img {
+    height: 55px;
+  }
+  #primary-menu-trigger {
+    top: 2px;
   }
 
   .swiper_wrapper:not(.force-full-screen), .swiper_wrapper:not(.force-full-screen):not(.canvas-slider-grid) .swiper-slide, .ei-slider {
@@ -24,6 +119,7 @@ $red: #DA0000;
 
   #slider  {
     .slider-caption {
+      top:15% !important;
       p {
         display: block !important;
         font-weight: 300;
@@ -34,6 +130,7 @@ $red: #DA0000;
         &.heading-hero {
           font-family: 'Quantico', sans-serif;
           font-size: 22px;
+          font-weight: bold;
         }
       }
       .button {
@@ -41,18 +138,23 @@ $red: #DA0000;
         background-color: $red;
         border-color: $red !important;
         font-family: 'Karla', sans-serif;
-        font-weight: 300;
+        font-weight: 700;
         padding: 0 18px;
         font-size: 16px;
         height: 44px;
         line-height: 40px;
+        &:hover {
+          opacity: 0.8;
+        }
       }
 
     }
 
     .swiper-slide {
       background-position: 10% 18% !important;
-      background-size: 120% !important;
+      background-size: 140% !important;
+      background-attachment: inherit !important;
+
     }
 
     .container {
@@ -67,7 +169,13 @@ $red: #DA0000;
     z-index: 9999999999999999999999;
     left: 50%;
     transform: translate(-50%,-50%);
+    transition: opacity 0.6s ease;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.8;
+    }
   }
+
 
   #content {
     .container {
@@ -106,7 +214,7 @@ $red: #DA0000;
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 26px;
-    .col_one_third {
+    .col_one_fourth {
       flex-grow: 1;
       width: 50%;
       margin-bottom: 24px !important;
@@ -116,8 +224,7 @@ $red: #DA0000;
         letter-spacing: -0.34px;
         padding: 0 15px;
         span {
-          /* Diesel Enthusiast Ap Copy: */
-          font-family: Karla-Regular;
+          font-family: 'Karla', sans-serif;
           font-size: 14px;
           color: #030303;
           letter-spacing: -0.34px;
@@ -134,6 +241,14 @@ $red: #DA0000;
           color: #fff;
           font-size: 38px;
           line-height: 78px !important;
+        }
+        .icon-redneck {
+          &::before {
+            background-image: url('../images/home/Redneck-Anything.svg');
+          }
+          &:hover::before {
+            background-image: url('../images/home/Redneck-Anything.svg');
+          }
         }
       }
     }
@@ -193,6 +308,7 @@ $red: #DA0000;
       border-radius: 3px;
       width: 46%;
       margin: 0 2%;
+      padding: 0;
     }
   }
 
@@ -225,8 +341,12 @@ $red: #DA0000;
     .landing-video {
       top: 0;
       width: 100%;
-      height: 210px;
+      height: auto;
       margin: 0;
+      margin-bottom: 20px;
+    }
+    ul {
+      display: none;
     }
   }
 
@@ -302,14 +422,55 @@ $red: #DA0000;
   }
 }
 
+@media (max-width: 425px) {
+  #portfolio {
+    .portfolio-item {
+      width: 50% !important;
+      height: 125px !important;
+    }
+  }
+  .swiper-slide {
+    background-position: 10% 18% !important;
+    background-size: 140% !important;
+    background-attachment: inherit !important;
+
+  }
+
+}
+
+@media (max-width: 375px) {
+  #portfolio {
+    .portfolio-item {
+      width: 50% !important;
+      height: 110px !important;
+    }
+  }
+  #browse-market {
+
+    .button {
+      font-size: 12px;
+    }
+  }
+
+}
+
+@media (max-width: 320px) {
+  #portfolio {
+    .portfolio-item {
+      width: 50% !important;
+      height: 95px !important;
+    }
+  }
+
+}
 
 
 // SLIDER
 
+
 .slick-arrow {
-	display: none !important;
 	position: absolute;
-	top: 18%;
+	top: 24%;
 	z-index: 10;
 	border-radius: 50%;
 	width: 30px;
@@ -319,6 +480,27 @@ $red: #DA0000;
 	opacity: 0.4;
 	transition: opacity 0.3s ease;
 	background-size: cover;
+  background-color: transparent;
+
+  display: inline-block;
+  font-family: 'font-icons';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: inherit;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 26px;
+  &:before {
+    width: 100%;
+    height: 100%;
+    color: black;
+
+    line-height: 20px;
+    position: absolute;
+  }
 }
 
 .slick-arrow:hover {
@@ -326,23 +508,33 @@ $red: #DA0000;
 	transition: opacity 0.3s ease;
 }
 
-.slick-arrow.slick-next {
+.slick-arrow.slick-prev {
 	left: -10px;
 	transform: translateX(-100%);
-	background-image: url('images/modules/testimonial/prev.png');
+	//background-image: url('images/modules/testimonial/prev.png');
+  &:before {
+    content: "\e7a4";
+    left: -2px;
+    top: 4px;
+  }
 
 }
 
-.slick-arrow.slick-prev {
+.slick-arrow.slick-next {
 	right: -10px;
 	transform: translateX(100%);
-	background-image: url('images/modules/testimonial/next.png');
+	//background-image: url('images/modules/testimonial/next.png');
+  &:before {
+    content: "\e7a5";
+    left: 2px;
+    top: 4px;
+  }
 
 }
 
 @media (max-width: 767px) {
 	.slick-slider {
-		xmargin: 0 20px;
+		margin: 0 40px;
 	}
 }
 
@@ -351,14 +543,14 @@ $red: #DA0000;
 		margin: 0 20px;
 	}
 	.slick-arrow {
-		top: 12%;
+		top: 19%;
 		width: 25px;
 		height: 25px;
 	}
-	.slick-arrow.slick-next {
+	.slick-arrow.slick-prev {
 		left: 0px;
 	}
-	.slick-arrow.slick-prev {
+	.slick-arrow.slick-next {
 		right: 0px;
 	}
 }
