@@ -1510,14 +1510,9 @@
 		top: 50px !important;
 	}
 
-	.swiper-slide {
-		background-position: 0% 0% !important;
-		background-size: 160% !important;
-	}
 
-	.hide-on-mobile {
-		display: none;
-	}
+
+
 
 	.slider-caption h2 { margin-bottom: 0 !important; }
 
@@ -2275,6 +2270,6 @@ only screen and (                min-resolution: 2dppx) and (max-width: 991px) {
 	}
 	#crew {
 		padding-bottom: 0px !important;
-
 	}
+
 }
