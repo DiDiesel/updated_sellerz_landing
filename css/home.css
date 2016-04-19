@@ -1,5 +1,74 @@
+.text-centered {
+  text-align: center;
+}
+
+.heading-block.center > span, .heading-block.title-center > span, .center .heading-block > span {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#content .container {
+  max-width: 1050px;
+}
+
+#slider .slider-caption p.heading-hero {
+  font-family: 'Quantico', sans-serif;
+  font-weight: bold !important;
+  font-size: 56px;
+  line-height: 62px;
+  margin-bottom: 5px;
+}
+
+.featherlight-content iframe {
+  width: 80vw;
+  height: 70vh;
+}
+
+.feature-box .button {
+  background-color: transparent !important;
+  border: 2px solid #DA0000;
+  border-radius: 3px;
+  color: #DA0000;
+  text-shadow: none;
+  padding: 10px 16px;
+  height: auto;
+  line-height: normal;
+  font-size: 16px;
+  letter-spacing: -0.39px;
+  line-height: 20px;
+  margin-top: 30px;
+}
+
+.feature-box:hover .button {
+  color: white;
+  background-color: #DA0000 !important;
+}
+
+#content .forInfo-link .container {
+  width: auto;
+  max-width: 100%;
+}
+
+.landing-video {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.landing-video + a {
+  margin: 0 auto;
+  margin-top: 30px;
+  color: #DA0000 !important;
+  border-color: #DA0000 !important;
+  width: 40%;
+}
+
 .playButton-gray {
   display: none;
+}
+
+.callMobile .si-call:hover, .callMobile .si-colored.si-call {
+  background-color: transparent !important;
 }
 
 .hide-on-desktop {
@@ -8,6 +77,10 @@
 
 #content > .content-wrap, #crew {
   padding-bottom: 0px;
+}
+
+#sites .hide-on-mobile {
+  padding: 50px 0;
 }
 
 .slider-caption {
@@ -21,9 +94,36 @@
   font-size: 42px;
 }
 
+#slider {
+  max-height: 75vh;
+}
+
 #slider .slider-caption p.heading-hero {
   font-family: 'Quantico', sans-serif;
   font-weight: bold !important;
+  line-height: auto !important;
+}
+
+#slider .slider-caption .button {
+  background-color: #DA0000;
+  color: white;
+  border-color: #DA0000;
+  margin-top: 20px;
+}
+
+#slider .slider-caption .button-video {
+  background-color: transparent;
+  border-color: white;
+}
+
+#slider .slider-caption .button-video i {
+  font-size: 28px;
+  top: 7px;
+  padding-right: 5px;
+}
+
+#slider .slider-caption .button-video:hover {
+  background-color: #DA0000;
 }
 
 .icon-redneck::before {
@@ -55,16 +155,70 @@
   font-family: 'Karla', sans-serif;
 }
 
+.swiper-slide {
+  background-position: 10% 0% !important;
+  background-size: 160% !important;
+}
+
 #browse-market {
   display: none;
+}
+
+.team .team-desc > .social-icon, .heading-block > .social-icon, .socialIconsFooter > .social-icon {
+  padding: 0px !important;
+  position: relative;
+}
+
+.team .team-desc > .social-icon i, .heading-block > .social-icon i, .socialIconsFooter > .social-icon i {
+  position: absolute;
+  width: 100%;
+  margin: 0 !important;
+  transition: top 0.3s ease;
+}
+
+.team .team-desc > .social-icon i:first-of-type, .heading-block > .social-icon i:first-of-type, .socialIconsFooter > .social-icon i:first-of-type {
+  top: 0;
+}
+
+.team .team-desc > .social-icon i:last-of-type, .heading-block > .social-icon i:last-of-type, .socialIconsFooter > .social-icon i:last-of-type {
+  top: 30px;
+}
+
+.team .team-desc > .social-icon:hover i:first-of-type, .heading-block > .social-icon:hover i:first-of-type, .socialIconsFooter > .social-icon:hover i:first-of-type {
+  top: -30px;
+}
+
+.team .team-desc > .social-icon:hover i:last-of-type, .heading-block > .social-icon:hover i:last-of-type, .socialIconsFooter > .social-icon:hover i:last-of-type {
+  top: 0;
+}
+
+#advertise a {
+  color: #D9534E;
+}
+
+.sign-up {
+  padding-bottom: 0;
 }
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
   .swiper-slide {
-    background-position: 10% 18% !important;
-    background-size: 165% !important;
+    background-position: 15% 0% !important;
+    background-size: 220% !important;
     background-attachment: inherit !important;
+  }
+  .social-icon.si-small {
+    width: 30px;
+    height: 30px;
+  }
+  .buttonIcons-grid .heading-block.center > span {
+    font-size: 21px;
+  }
+  .forInfo-link {
+    font-size: 19px !important;
+  }
+  .hide-on-ipad {
+    display: none;
   }
 }
 
@@ -109,8 +263,10 @@
     font-family: 'Quantico', sans-serif;
     font-size: 22px;
     font-weight: bold;
+    line-height: normal;
   }
   #slider .slider-caption .button {
+    xdisplay: none !important;
     margin-top: 20px;
     background-color: #DA0000;
     border-color: #DA0000 !important;
@@ -120,6 +276,10 @@
     font-size: 16px;
     height: 44px;
     line-height: 40px;
+  }
+  #slider .slider-caption .button.button-video {
+    background-color: transparent;
+    border-color: white !important;
   }
   #slider .slider-caption .button:hover {
     opacity: 0.8;
@@ -132,18 +292,13 @@
   #slider .container {
     width: 100% !important;
   }
-  .playButton-gray {
+  .playButton-white {
     display: inline-block;
-    position: absolute;
-    z-index: 9999999999999999999999;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    transition: opacity 0.6s ease;
+    transition: opacity 0.4s ease;
     cursor: pointer;
+    margin-top: 25px;
   }
-  .playButton-gray:hover {
+  .playButton-white:hover {
     opacity: 0.8;
   }
   #content .container {
@@ -209,15 +364,13 @@
     margin: 0 auto 15px;
   }
   .buttonIcons-grid .col_one_fourth .fbox-icon i {
-    background-color: #333333;
-    color: #fff;
     font-size: 38px;
     line-height: 78px !important;
   }
-  .buttonIcons-grid .col_one_fourth .fbox-icon .icon-redneck::before {
-    background-image: url("../images/home/Redneck-Anything.svg");
+  .buttonIcons-grid .col_one_fourth .feature-box .icon-redneck::before {
+    background-image: url("../images/home/Redneck-Anything-gray.svg");
   }
-  .buttonIcons-grid .col_one_fourth .fbox-icon .icon-redneck:hover::before {
+  .buttonIcons-grid .col_one_fourth .feature-box:hover .icon-redneck::before {
     background-image: url("../images/home/Redneck-Anything.svg");
   }
   #builds h2 {
@@ -300,7 +453,7 @@
     width: 100%;
     height: auto;
     margin: 0;
-    margin-bottom: 20px;
+    xmargin-bottom: 20px;
   }
   #tv-show ul {
     display: none;
@@ -369,6 +522,15 @@
 }
 
 @media (max-width: 425px) {
+  #slider .slider-caption .button {
+    font-size: 12px;
+    padding: 0 14px;
+  }
+  #slider .slider-caption .button i {
+    font-size: 18px;
+    top: 4px;
+    padding-right: 0px;
+  }
   #portfolio .portfolio-item {
     width: 50% !important;
     height: 125px !important;
@@ -399,28 +561,14 @@
 
 .slick-arrow {
   position: absolute;
-  top: 24%;
-  z-index: 10;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
+  top: 0;
+  width: 35px;
+  height: 100%;
   color: transparent;
   border: none;
-  opacity: 0.4;
-  transition: opacity 0.3s ease;
-  background-size: cover;
-  background-color: transparent;
-  display: inline-block;
-  font-family: 'font-icons';
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: inherit;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-size: 26px;
+  xopacity: 0.4;
+  xtransition: opacity 0.3s ease;
+  z-index: 999999;
 }
 
 .slick-arrow:before {
@@ -432,51 +580,42 @@
 }
 
 .slick-arrow:hover {
-  opacity: 0.8;
-  transition: opacity 0.3s ease;
+  xopacity: 0.8;
+  xtransition: opacity 0.3s ease;
 }
 
 .slick-arrow.slick-prev {
-  left: -10px;
-  -webkit-transform: translateX(-100%);
-      -ms-transform: translateX(-100%);
-          transform: translateX(-100%);
-}
-
-.slick-arrow.slick-prev:before {
-  content: "\e7a4";
-  left: -2px;
-  top: 4px;
+  left: 0;
+  xtransform: translateX(-100%);
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&1+0,0.8+100 */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0.8) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ccffffff',GradientType=1 );
+  /* IE6-9 */
 }
 
 .slick-arrow.slick-next {
-  right: -10px;
-  -webkit-transform: translateX(100%);
-      -ms-transform: translateX(100%);
-          transform: translateX(100%);
-}
-
-.slick-arrow.slick-next:before {
-  content: "\e7a5";
-  left: 2px;
-  top: 4px;
+  right: 0px;
+  xtransform: translateX(100%);
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0.8+0,1+100 */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.8) 0%, white 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccffffff', endColorstr='#ffffff',GradientType=1 );
+  /* IE6-9 */
 }
 
 @media (max-width: 767px) {
-  .slick-slider {
-    margin: 0 40px;
+  .slick-slider .slick-slide {
+    padding-left: 7px;
+    padding-right: 7px;
   }
 }
 
 @media (max-width: 425px) {
-  .slick-slider {
-    margin: 0 20px;
-  }
-  .slick-arrow {
-    top: 19%;
-    width: 25px;
-    height: 25px;
-  }
   .slick-arrow.slick-prev {
     left: 0px;
   }

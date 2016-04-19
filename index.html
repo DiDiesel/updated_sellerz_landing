@@ -51,11 +51,13 @@
 	<script type="text/javascript" src="include/rs-plugin/js/extensions/revolution.extension.navigation.min.js"></script>
 	<script type="text/javascript" src="include/rs-plugin/js/extensions/revolution.extension.migration.min.js"></script>
 	<script type="text/javascript" src="include/rs-plugin/js/extensions/revolution.extension.parallax.min.js"></script>
+	<script src="//cdn.rawgit.com/noelboss/featherlight/1.4.0/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
 
 	<!-- SLIDER REVOLUTION 5.x CSS SETTINGS -->
 	<link rel="stylesheet" type="text/css" href="include/rs-plugin/css/settings.css" media="screen" />
 	<link rel="stylesheet" type="text/css" href="include/rs-plugin/css/layers.css">
 	<link rel="stylesheet" type="text/css" href="include/rs-plugin/css/navigation.css">
+	<link href="//cdn.rawgit.com/noelboss/featherlight/1.4.0/release/featherlight.min.css" type="text/css" rel="stylesheet" />
 
 	<!-- Favicon -->
 	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
@@ -108,7 +110,7 @@
 
     <!-- Top Bar
 		============================================= -->
-		<div id="top-bar">
+		<div id="top-bar" class="hide-on-mobile">
 
 			<div class="container clearfix">
 
@@ -119,10 +121,10 @@
 					<div class="top-links">
 						<ul>
 							<li><a href="http://dieselsellerz.com/diesel"><i class="icomoon-dieselsellerz"></i></a></li>
-                            <li><a href="http://dieselpowergear.com"><i class="icomoon-dpg"></i></a></li>
-                            <li><a href="http://dieselpowergear.com/pages/4x4-anything"><i class="icomoon-x4"></i></a></li>
-                            <li><a href="http://patriot.tires"><i class="icomoon-patriot"></i></a></li>
-
+              <li><a href="http://dieselpowergear.com"><i class="icomoon-dpg"></i></a></li>
+              <li><a href="http://dieselpowergear.com/pages/4x4-anything"><i class="icomoon-x4"></i></a></li>
+              <li><a href="http://patriot.tires"><i class="icomoon-patriot"></i></a></li>
+							<li class="hide-on-desktop callMobile"><a href="tel:+18017191864" class="si-call"><i class="icon-call"></i></a></li>
 						</ul>
 					</div><!-- .top-links end -->
 
@@ -139,7 +141,7 @@
 							<li><a href="http://youtube.com/dieselsellerz" target="_blank" class="si-youtube"><span class="ts-icon"><i class="icon-youtube"></i></span><span class="ts-text">YouTube</span></a></li>
                             <li><a href="http://twitter.com/dieselsellerz" target="_blank" class="si-twitter"><span class="ts-icon"><i class="icon-twitter"></i></span><span class="ts-text">Twitter</span></a></li>
 							<li><a href="https://plus.google.com/+DieselSellerz" target="_blank" class="si-google"><span class="ts-icon"><i class="icon-google"></i></span><span class="ts-text">Google +</span></a></li>
-							<li><a href="tel:+" class="si-call"><span class="ts-icon"><i class="icon-call"></i></span><span class="ts-text">+1.801.719.1864</span></a></li>
+							<li><a href="tel:+18017191864" class="si-call"><span class="ts-icon"><i class="icon-call"></i></span><span class="ts-text">+1.801.719.1864</span></a></li>
 							<li><a href="mailto:info@dieselsellerz.com" class="si-email3"><span class="ts-icon"><i class="icon-email3"></i></span><span class="ts-text">info@dieselsellerz.com</span></a></li>
 						</ul>
 					</div><!-- #top-social end -->
@@ -237,8 +239,12 @@
 								<p data-caption-animate="fadeInUp" data-caption-delay="400" class="heading-hero">WE BUILD BADASS TRUCKS.</p>
 								<p data-caption-animate="fadeInUp" data-caption-delay="700">And the best part... we give them away.</p>
 
-								<a href="http://www.dieselpowergear.com" target="_blank" class="button button-border button-rounded button-large center">WIN A TRUCK</a>
+								<a href="http://www.dieselpowergear.com" target="_blank" class="button button-border button-rounded button-large center button-win">WIN A TRUCK</a>
 
+								<a href="https://www.youtube.com/embed/RETNeRxIEPE?rel=0&amp;controls=0" data-featherlight="iframe" data-iframewidth="500" class="button button-border button-rounded button-large center button-video"><i class="icon-caret-right"></i>LEARN HOW</a>
+
+
+								<!-- <img class="playButton-white hide-on-desktop" src="images/home/play-button-white.png" alt="" /> -->
 
 							</div>
 						</div>
@@ -322,7 +328,7 @@
 
 
 		<div>
-			<img class="playButton-gray" src="images/home/play-button-gray.svg" alt="" />
+
 		</div>
 		<!-- Content
 		============================================= -->
@@ -331,23 +337,13 @@
 
 			<div class="content-wrap">
 
-				<div id="sites" class="container clearfix">
 
-					<div class="divcenter center clearfix hide-on-mobile" style="max-width: 900px;">
-						<img class="bottommargin hide-on-mobile" src="images/logo.png" alt="">
-						<h1>We are <span>DieselSellerz</span>.</h1>
-						<h2>Whether you’re a private seller, a dealer, or in the market for your own diesel beast (or Jeep), you've come to the right place. </h2>
-						<a href="http://classifieds.dieselsellerz.com/diesel" class="button button-3d button-dark button-large">Browse Diesels</a>
-						<a href="http://classifieds.dieselsellerz.com/jeep/trucks" class="button button-3d button-dark button-large">Browse Jeeps</a>
-					</div>
-
-					<div id="our-sites" class="line hide-on-mobile"></div>
-				</div>
 
 				<div class="container clearfix buttonIcons-grid">
 					<div class="heading-block center shop-our-gear">
 						<h2>SHOP OUR GEAR <i class="icon-caret-right" style="color: #DB0000; top:4px;"></i><i class="icon-caret-right" style="color: #DB0000; top:4px;"></i> WIN A TRUCK</h2>
-						<span>Every $5 spent on our sites below will earn you one entry into our current giveaways. For info on our current giveaways, check us out on <a href="http://dieselpowergear.com" target="_blank">Diesel Power Gear</a>.</span>
+						<span>Every $5 spent on our sites below will earn you one entry into our current giveaways. Tap on a link below to start shopping and win a truck.</span>
+
 					</div>
 
 					<div class="clear bottommargin-sm hide-on-mobile"></div>
@@ -358,33 +354,37 @@
 								<a href="http://dieselpowergear.com" target="_blank"><i class="icomoon-dpg"></i></a>
 							</div>
 							<h3>DIESEL POWER GEAR<span class="subtitle">Diesel Enthusiast Apparel & Gear</span></h3>
+							<a href="http://dieselpowergear.com" class="button" target="_blank">SHOP NOW</a>
 						</div>
 					</div>
 
-					<div class="col_one_fourth nobottommargin col_last">
+					<div class="col_one_fourth nobottommargin ">
 						<div class="feature-box fbox-center fbox-light fbox-effect nobottomborder">
 							<div class="fbox-icon">
 								<a href="https://redneckanything.com/" target="_blank"><i class="icomoon-patriot icon-redneck"></i></a>
 							</div>
-							<h3>REDNECK ANYTHING<span class="subtitle">Everything for your Redneck Needs</span></h3>
+							<h3>REDNECK ANYTHING<span class="subtitle">Everything for Your Redneck Needs</span></h3>
+							<a href="http://redneckanything.com" class="button" target="_blank">SHOP NOW</a>
 						</div>
 					</div>
 
-					<div class="col_one_fourth nobottommargin col_last">
+					<div class="col_one_fourth nobottommargin ">
 						<div class="feature-box fbox-center fbox-light fbox-effect nobottomborder">
 							<div class="fbox-icon">
 								<a href="http://dieseltires.com" target="_blank"><i class="icomoon-patriot"></i></a>
 							</div>
 							<h3>PATRIOT TIRES<span class="subtitle">Designed & Tested by Yours Truly</span></h3>
+							<a href="http://dieseltires.com" class="button" target="_blank">SHOP NOW</a>
 						</div>
 					</div>
 
-					<div class="col_one_fourth nobottommargin">
+					<div class="col_one_fourth nobottommargin col_last">
 						<div class="feature-box fbox-center fbox-light fbox-effect nobottomborder">
 							<div class="fbox-icon">
 								<a href="http://dieselpowergear.com/pages/4x4-anything" target="_blank"><i class="icomoon-x4"></i></a>
 							</div>
 							<h3>4x4 ANYTHING<span class="subtitle">The Best Parts 4 The Best Trucks</span></h3>
+							<a href="http://dieselpowergear.com/pages/4x4-anything" class="button" target="_blank">SHOP NOW</a>
 						</div>
 					</div>
 
@@ -604,16 +604,28 @@
 
 				</div>
 
-				<a href="http://dieselpowergear.com" target="_blank" class="button button-full button-dark center tright nobottommargin">
+				<a href="http://dieselpowergear.com" target="_blank" class="forInfo-link button button-full button-dark center tright nobottommargin">
 					<div class="container clearfix">
 						For info on any current giveaway(s), check us out on <strong>Diesel Power Gear</strong> <i class="icon-caret-right" style="top:4px;"></i>
 					</div>
 				</a>
+				<div id="sites" class="container clearfix">
+
+					<div class="divcenter center clearfix hide-on-mobile" style="max-width: 950px;">
+						<!-- <img class="bottommargin hide-on-mobile" src="images/logo.png" alt="">
+						<h1>We are <span>DieselSellerz</span>.</h1> -->
+						<h2>Whether you’re a private seller, a dealer, or in the market for your own diesel beast (or Jeep), you've come to the right place. </h2>
+						<a href="http://classifieds.dieselsellerz.com/diesel" class="button button-3d button-dark button-large" target="_blank">Browse Diesels</a>
+						<a href="http://classifieds.dieselsellerz.com/jeep/trucks" class="button button-3d button-dark button-large" target="_blank">Browse Jeeps</a>
+					</div>
+
+					<!-- <div id="our-sites" class="line hide-on-mobile"></div> -->
+				</div>
 
 				<div id="browse-market">
 					<div class="container">
 						<h3>Whether you’re a private seller, a dealer, or in the market for your own diesel beast (or Jeep), you’ve come to the right place.</h3>
-						<a class="button" href="#">BROWSE DIESELS</a><a class="button" href="#">BROWSE JEEPS</a>
+						<a class="button" href="http://classifieds.dieselsellerz.com/diesel" target="_blank">BROWSE DIESELS</a><a class="button" href="http://classifieds.dieselsellerz.com/jeep/trucks" target="_blank">BROWSE JEEPS</a>
 					</div>
 				</div>
 
@@ -636,7 +648,7 @@
 					</div>
 
 
-					<div class="col_two_fifth topmargin nobottommargin">
+					<!-- <div class="col_two_fifth topmargin nobottommargin">
 
 						<div class="clear bottommargin-sm hide-on-mobile"></div>
 
@@ -652,15 +664,15 @@
 
 						<a href="http://www.discovery.com/tv-shows/diesel-brothers/" target="_blank" class="button button-border button-rounded button-large noleftmargin hide-on-mobile">WATCH FULL EPISODES</a>
 
-					</div>
+					</div> -->
 
-					<div class="col_three_fifth topmargin nobottommargin col_last margin-bottom-zero">
+					<div class="text-centered">
 
 						<div class="landing-video">
 							<iframe width="560" height="315" src="http://www.youtube.com/embed/JnoLkx33Un0" frameborder="0" allowfullscreen></iframe>
 						</div>
 
-						<a href="http://www.discovery.com/tv-shows/diesel-brothers/" target="_blank" class="button button-border button-rounded button-large noleftmargin hide-on-desktop">WATCH FULL EPISODES</a>
+						<a href="http://www.discovery.com/tv-shows/diesel-brothers/" target="_blank" class="button button-border button-rounded button-large noleftmargin">WATCH FULL EPISODES</a>
 
 					</div>
 				</div>
@@ -813,7 +825,7 @@
 
 
 
-				<div class="section dark parallax notopmargin nobottommargin noborder hide-on-mobile" style="height: 500px; padding: 200px 0;">
+				<div class="section dark parallax notopmargin nobottommargin noborder hide-on-ipad" style=" padding: 120px 0;">
 
 					<div class="container clearfix">
 
@@ -827,7 +839,7 @@
 					</div>
 
 					<div class="video-wrap">
-						<video poster="images/slider/rev/bg-4.jpg" preload="none" autoplay muted>
+						<video poster="images/slider/rev/bg-4.jpg" preload="none" autoplay muted loop>
 							<source src="images/videos/video-social.mp4" type="video/mp4" />
 						</video>
 						<div class="video-overlay" style="background-color: rgba(0,0,0,0);"></div>
@@ -896,7 +908,7 @@
 
 						<div class="heading-block center">
 							<h3>Never Miss a <span>Giveaway</span>.</h3>
-							<span>Subscribe to our email list. 100% diesel. 0% spam.</span>
+							<span>Subscribe to our email list.<br class="hide-on-desktop"> 100% diesel. 0% spam.</span>
 						</div>
 						<div class="center">
 							<a href="https://confirmsubscription.com/h/d/AA88CB8F649BD054" class="button button-3d button-dark button-large">Sign Up</a>
@@ -905,7 +917,7 @@
 
 				</div>
 				<div class="widget clearfix center hide-on-mobile">
-							<h4><a href="instagram.com/dieselpowergear">@dieselpowergear</a></h4>
+							<h4><a href="http://instagram.com/dieselpowergear" target="_blank">@dieselpowergear</a></h4>
 							<div id="instagram-photos" class="instagram-photos masonry-thumbs col-6" data-user="297251666" data-count="12" data-type="user"></div>
 				</div>
 
@@ -933,9 +945,10 @@
 									1955 S 1800 W<br>
 									Woods Cross, UT 84087<br>
 								</address>
-								<abbr title="Phone Number"><strong>Phone:</strong></abbr> (801) 719-1864<br>
-								<abbr title="Email Address"><strong>Email:</strong></abbr> info@dieselsellerz.com
+								<a href="tel:+18017191864"><strong>Phone:</strong> (801) 719-1864</a><br>
+								<a href="mailto:info@dieselsellerz.com"><strong>Email:</strong> info@dieselsellerz.com</a>
 							</div>
+
 
 							<div class="widget clearfix socialIconsFooter">
 
@@ -1035,9 +1048,10 @@
 
 							<h4>Advertise with Us</h4>
 
-							<p>Interested in working with us? We'd love to hear from you!</p>
+							<p>Interested in working with us?
+							<br />Email us at <a href="mailto:info@dieselsellerz.com">info@dieselsellerz.com</a></p>
 
-							<div id="quick-contact-form-result" data-notify-type="success" data-notify-msg="<i class=icon-ok-sign></i> Message Sent Successfully!"></div>
+							<!-- <div id="quick-contact-form-result" data-notify-type="success" data-notify-msg="<i class=icon-ok-sign></i> Message Sent Successfully!"></div>
 
 							<form id="quick-contact-form" name="quick-contact-form" action="http://classifieds.dieselsellerz.com/themes/front/include/quickcontact.php" method="post" class="quick-contact-form nobottommargin">
 
@@ -1055,7 +1069,7 @@
 								<input type="text" class="hidden" id="quick-contact-form-botcheck" name="quick-contact-form-botcheck" value="" />
 								<button type="submit" id="quick-contact-form-submit" name="quick-contact-form-submit" class="btn btn-danger nomargin" value="submit">Send Email</button>
 
-							</form>
+							</form> -->
 
 							<script type="text/javascript">
 

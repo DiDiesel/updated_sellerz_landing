@@ -1,7 +1,86 @@
 $red: #DA0000;
+.text-centered {
+  text-align: center;
+}
+.heading-block.center > span, .heading-block.title-center > span, .center .heading-block > span {
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#content .container {
+  max-width: 1050px;
+}
+
+#slider .slider-caption p.heading-hero {
+    font-family: 'Quantico', sans-serif;
+    font-weight: bold !important;
+    font-size: 56px;
+    line-height: 62px;
+    margin-bottom: 5px;
+}
+
+
+.featherlight-content iframe{
+  width: 80vw;
+  height: 70vh;
+}
+.feature-box {
+  .button {
+    background-color: transparent !important;
+    border: 2px solid $red;
+    border-radius: 3px;
+    color: $red;
+    text-shadow: none;
+    padding: 10px 16px;
+    height: auto;
+    line-height: normal;
+    font-size: 16px;
+    letter-spacing: -0.39px;
+    line-height: 20px;
+    margin-top: 30px;
+
+  }
+  &:hover {
+    .button {
+      color: white;
+      background-color: $red !important;
+    }
+  }
+}
+
+#content .forInfo-link {
+  .container {
+    width: auto;
+    max-width: 100%;;
+  }
+
+}
+
+.landing-video {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.landing-video + a {
+  margin: 0 auto;
+  margin-top: 30px;
+  color: $red !important;
+  border-color: $red !important;
+  width: 40%;
+}
+
+#tv-show {
+
+}
 
 .playButton-gray {
   display: none;
+}
+.callMobile {
+  .si-call:hover, .si-colored.si-call {
+      background-color: transparent !important;
+  }
 }
 
 .hide-on-desktop {
@@ -10,6 +89,10 @@ $red: #DA0000;
 
 #content > .content-wrap, #crew {
   padding-bottom: 0px;
+}
+
+#sites .hide-on-mobile {
+  padding: 50px 0;
 }
 
 .slider-caption  {
@@ -24,11 +107,31 @@ $red: #DA0000;
 }
 
 #slider  {
+  max-height: 75vh;
   .slider-caption {
     p {
       &.heading-hero {
         font-family: 'Quantico', sans-serif;
         font-weight: bold !important;
+        line-height: auto !important;
+      }
+    }
+    .button {
+      background-color: $red;
+      color: white;
+      border-color: $red;
+      margin-top: 20px;
+    }
+    .button-video {
+      background-color: transparent;
+      border-color: white;
+      i {
+        font-size: 28px;
+        top: 7px;
+        padding-right: 5px;
+      }
+      &:hover {
+        background-color: $red;
       }
     }
   }
@@ -67,15 +170,75 @@ $red: #DA0000;
   }
 }
 
+.swiper-slide {
+  background-position: 10% 0% !important;
+  background-size: 160% !important;
+}
+
 #browse-market {
   display: none;
 }
+
+.team .team-desc > .social-icon, .heading-block > .social-icon, .socialIconsFooter  > .social-icon{
+  padding: 0px !important;
+  position: relative;
+  i {
+    position: absolute;
+    width: 100%;
+    margin: 0 !important;
+    transition: top 0.3s ease;
+    &:first-of-type {
+      top: 0;
+    }
+    &:last-of-type {
+      top: 30px;
+    }
+  }
+  &:hover {
+    i {
+      &:first-of-type {
+        top: -30px;
+      }
+      &:last-of-type {
+        top: 0;
+      }
+    }
+  }
+
+}
+
+#advertise {
+  a {
+    color: #D9534E;
+  }
+}
+
+.sign-up {
+  padding-bottom: 0;
+}
+
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
   .swiper-slide {
-    background-position: 10% 18% !important;
-    background-size: 165% !important;
+    background-position: 15% 0% !important;
+    background-size: 220% !important;
     background-attachment: inherit !important;
+  }
+  .social-icon.si-small {
+    width: 30px;
+    height: 30px;
+  }
+  .buttonIcons-grid {
+    .heading-block.center > span {
+      font-size: 21px;
+    }
+  }
+  .forInfo-link {
+    font-size: 19px !important;
+  }
+  .hide-on-ipad {
+    display: none;
   }
 }
 
@@ -131,9 +294,11 @@ $red: #DA0000;
           font-family: 'Quantico', sans-serif;
           font-size: 22px;
           font-weight: bold;
+          line-height: normal;
         }
       }
       .button {
+        xdisplay: none !important;
         margin-top: 20px;
         background-color: $red;
         border-color: $red !important;
@@ -143,6 +308,10 @@ $red: #DA0000;
         font-size: 16px;
         height: 44px;
         line-height: 40px;
+        &.button-video {
+          background-color: transparent;
+          border-color: white !important;
+        }
         &:hover {
           opacity: 0.8;
         }
@@ -163,14 +332,11 @@ $red: #DA0000;
 
 
   }
-  .playButton-gray {
+  .playButton-white {
     display: inline-block;
-    position: absolute;
-    z-index: 9999999999999999999999;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    transition: opacity 0.6s ease;
+    transition: opacity 0.4s ease;
     cursor: pointer;
+    margin-top: 25px;
     &:hover {
       opacity: 0.8;
     }
@@ -237,17 +403,22 @@ $red: #DA0000;
         height: 80px;
         margin: 0 auto 15px;
         i {
-          background-color: #333333;
-          color: #fff;
           font-size: 38px;
           line-height: 78px !important;
         }
+
+      }
+      .feature-box {
         .icon-redneck {
           &::before {
-            background-image: url('../images/home/Redneck-Anything.svg');
+            background-image: url('../images/home/Redneck-Anything-gray.svg');
           }
-          &:hover::before {
-            background-image: url('../images/home/Redneck-Anything.svg');
+        }
+        &:hover {
+          .icon-redneck {
+            &::before {
+              background-image: url('../images/home/Redneck-Anything.svg');
+            }
           }
         }
       }
@@ -343,7 +514,7 @@ $red: #DA0000;
       width: 100%;
       height: auto;
       margin: 0;
-      margin-bottom: 20px;
+      xmargin-bottom: 20px;
     }
     ul {
       display: none;
@@ -423,6 +594,18 @@ $red: #DA0000;
 }
 
 @media (max-width: 425px) {
+
+  #slider .slider-caption {
+    .button {
+      font-size: 12px;
+      padding: 0 14px;
+      i {
+        font-size: 18px;
+        top: 4px;
+        padding-right: 0px;
+      }
+    }
+  }
   #portfolio {
     .portfolio-item {
       width: 50% !important;
@@ -470,29 +653,18 @@ $red: #DA0000;
 
 .slick-arrow {
 	position: absolute;
-	top: 24%;
-	z-index: 10;
-	border-radius: 50%;
-	width: 30px;
-	height: 30px;
+	top: 0;
+	width: 35px;
+	height: 100%;
 	color: transparent;
 	border: none;
-	opacity: 0.4;
-	transition: opacity 0.3s ease;
-	background-size: cover;
-  background-color: transparent;
+	xopacity: 0.4;
+	xtransition: opacity 0.3s ease;
+  z-index: 999999;
 
-  display: inline-block;
-  font-family: 'font-icons';
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: inherit;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-size: 26px;
+
+
+
   &:before {
     width: 100%;
     height: 100%;
@@ -504,48 +676,62 @@ $red: #DA0000;
 }
 
 .slick-arrow:hover {
-	opacity: 0.8;
-	transition: opacity 0.3s ease;
+	xopacity: 0.8;
+	xtransition: opacity 0.3s ease;
 }
 
 .slick-arrow.slick-prev {
-	left: -10px;
-	transform: translateX(-100%);
+	left: 0;
+	xtransform: translateX(-100%);
+  //background-image: url('../images/home/white-gradient-slide.png');
 	//background-image: url('images/modules/testimonial/prev.png');
+
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&1+0,0.8+100 */
+background: -moz-linear-gradient(left,  rgba(255,255,255,1) 0%, rgba(255,255,255,0.8) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(255,255,255,0.8) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0.8) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ccffffff',GradientType=1 ); /* IE6-9 */
+
+
+
   &:before {
-    content: "\e7a4";
-    left: -2px;
-    top: 4px;
   }
 
 }
 
 .slick-arrow.slick-next {
-	right: -10px;
-	transform: translateX(100%);
+	right: 0px;
+	xtransform: translateX(100%);
 	//background-image: url('images/modules/testimonial/next.png');
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0.8+0,1+100 */
+background: -moz-linear-gradient(left,  rgba(255,255,255,0.8) 0%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left,  rgba(255,255,255,0.8) 0%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right,  rgba(255,255,255,0.8) 0%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccffffff', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
+
+
   &:before {
-    content: "\e7a5";
-    left: 2px;
-    top: 4px;
+
   }
 
 }
 
 @media (max-width: 767px) {
 	.slick-slider {
-		margin: 0 40px;
+    .slick-slide {
+      padding-left: 7px;
+      padding-right: 7px;
+    }
 	}
 }
 
 @media (max-width: 425px) {
 	.slick-slider {
-		margin: 0 20px;
+
 	}
 	.slick-arrow {
-		top: 19%;
-		width: 25px;
-		height: 25px;
+
+
 	}
 	.slick-arrow.slick-prev {
 		left: 0px;
