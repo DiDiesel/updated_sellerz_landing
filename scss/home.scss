@@ -1,19 +1,36 @@
 $red: #DA0000;
 
 @keyframes FadeOutIn {
+  0%   { opacity: 1; }
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-webkit-keyframes FadeOutIn {
+  0%   { opacity: 1; }
   0%   { opacity: 0; }
   100% { opacity: 1; }
 }
 
 #header {
-  // &.dark #logo img {
-  //   opacity: 0;
-  //   animation: FadeOutIn 1s;
-  // }
   // &.sticky-header #logo img {
-  //   opacity: 0;
-  //   animation: FadeOutIn 1s;
+  //   animation: FadeOutIn 3s;
+  //   -webkit-animation: FadeOutIn 3s;
   // }
+  &.sticky-header {
+    #logo img {
+      animation: FadeOutIn 1s;
+      -webkit-animation: FadeOutIn 1s;
+    }
+  }
+
+  // &.dark {
+  //   #logo img {
+  //     animation: FadeOutIn 1s;
+  //     -webkit-animation: FadeOutIn 1s;
+  //   }
+  // }
+
 }
 .text-centered {
   text-align: center;
