@@ -1,4 +1,20 @@
 $red: #DA0000;
+
+@keyframes FadeOutIn {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+#header {
+  // &.dark #logo img {
+  //   opacity: 0;
+  //   animation: FadeOutIn 1s;
+  // }
+  // &.sticky-header #logo img {
+  //   opacity: 0;
+  //   animation: FadeOutIn 1s;
+  // }
+}
 .text-centered {
   text-align: center;
 }
@@ -20,6 +36,11 @@ $red: #DA0000;
     margin-bottom: 5px;
 }
 
+
+#footer .container {
+  width: inherit;
+  max-width: 1280px;
+}
 
 .featherlight-content iframe{
   width: 80vw;
@@ -68,6 +89,9 @@ $red: #DA0000;
   color: $red !important;
   border-color: $red !important;
   width: 40%;
+  &:hover {
+    color: white !important;
+  }
 }
 
 #tv-show {
@@ -96,8 +120,7 @@ $red: #DA0000;
 }
 
 .slider-caption  {
-  top: 35% !important;
-  transition: translateX(-50%);
+  top: 30% !important;
   p:first-of-type {
     margin-bottom: 10px;
     font-family: 'Quantico', sans-serif;
@@ -240,6 +263,9 @@ $red: #DA0000;
   .hide-on-ipad {
     display: none;
   }
+  .buttonIcons-grid .ipad-margin h3 {
+    margin-bottom: 25px;
+  }
 }
 
 
@@ -258,6 +284,10 @@ $red: #DA0000;
   .sign-up {
     padding: 0 !important;
     padding-bottom: 50px !important;
+  }
+
+  #footer .col_last {
+    margin-bottom: 0 !important;
   }
 
   #header-wrap {
@@ -594,11 +624,21 @@ $red: #DA0000;
 }
 
 @media (max-width: 425px) {
+  .buttonIcons-grid .heading-block.center > span {
+    font-size: 14px;
+  }
+
+  .buttonIcons-grid .ipad-margin h3 {
+    margin-bottom: 0;
+  }
 
   #slider .slider-caption {
     .button {
-      font-size: 12px;
-      padding: 0 14px;
+      font-size: 16px;
+      padding: 0 11px;
+      margin-top: 15px;
+      margin-left: 2px;
+      margin-right: 2px;
       i {
         font-size: 18px;
         top: 4px;
@@ -612,9 +652,9 @@ $red: #DA0000;
       height: 125px !important;
     }
   }
-  .swiper-slide {
+  #slider .swiper-slide {
     background-position: 10% 18% !important;
-    background-size: 140% !important;
+    background-size: 160% !important;
     background-attachment: inherit !important;
 
   }
