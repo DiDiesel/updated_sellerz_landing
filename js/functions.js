@@ -2208,6 +2208,7 @@ var SEMICOLON = SEMICOLON || {};
 							sortBy: instaGramSortBy,
 							resolution: instaGramRes,
 							accessToken: c_accessToken,
+							template: '<a href="{{link}}" target="_blank"><img src="{{image}}" /></a>',
 							clientId: c_clientID
 						});
 
@@ -2220,6 +2221,7 @@ var SEMICOLON = SEMICOLON || {};
 							limit: Number(instaGramCount),
 							sortBy: instaGramSortBy,
 							resolution: instaGramRes,
+							template: '<a href="{{link}}" target="_blank"><img src="{{image}}" /></a>',
 							clientId: c_clientID
 						});
 
@@ -2232,6 +2234,7 @@ var SEMICOLON = SEMICOLON || {};
 							limit: Number(instaGramCount),
 							sortBy: instaGramSortBy,
 							resolution: instaGramRes,
+							template: '<a href="{{link}}" target="_blank"><img src="{{image}}" /></a>',
 							clientId: c_clientID
 						});
 
@@ -2243,6 +2246,7 @@ var SEMICOLON = SEMICOLON || {};
 							limit: Number(instaGramCount),
 							sortBy: instaGramSortBy,
 							resolution: instaGramRes,
+							template: '<a href="{{link}}" target="_blank"><img src="{{image}}" /></a>',
 							clientId: c_clientID
 						});
 
@@ -2710,10 +2714,43 @@ $(document).ready(function() {
 	  ]
 	});
 
+	$(document).on('click', 'a[href^="#"]', function(e) {
+    // target element id
+		event.preventDefault();
+    var id = $(this).attr('href');
+
+    // target element
+    var $id = $(id);
+    if ($id.length === 0) {
+        return;
+    }
+
+    // prevent standard hash navigation (avoid blinking in IE)
+    e.preventDefault();
+
+    // top position relative to the document
+		if ($(window).width() > 991) {
+			var pos = $(id).offset().top-80;
+		}else{
+			var pos = $(id).offset().top;
+		}
+
+
+    // animated top scrolling
+    $('body, html').animate({scrollTop: pos}, 800);
+});
+
 	$("#slider .button-win").click(function(event) {
 		event.preventDefault();
+
+		if ($(window).width() > 991) {
+			var posOff = $("#content").offset().top-80;
+		}else{
+			var posOff = $("#content").offset().top;
+		}
+
     $('html, body').animate({
-        scrollTop: $("#content").offset().top-80
+        scrollTop: posOff
     }, 800);
 	});
 });
