@@ -1,30 +1,29 @@
-@keyframes FadeOutIn {
-  0% {
-    opacity: 1;
-  }
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+#header, #header-wrap, #logo img, #primary-menu ul li a, #primary-menu ul li a div {
+  height: 60px;
+  transition: height .4s ease, opacity .3s ease;
 }
 
-@-webkit-keyframes FadeOutIn {
-  0% {
-    opacity: 1;
-  }
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+#header.dark {
+  width: 100%;
 }
 
-#header.sticky-header #logo img {
-  animation: FadeOutIn 1s;
-  -webkit-animation: FadeOutIn 1s;
+#header.dark #primary-menu {
+  -webkit-transform: translateY(-20px);
+      -ms-transform: translateY(-20px);
+          transform: translateY(-20px);
+}
+
+#header.dark #top-bar {
+  background-color: white;
+}
+
+#header {
+  xmargin-bottom: 45px;
+  position: absolute;
+}
+
+#header #header-wrap {
+  transition: background-color 0.65s ease;
 }
 
 .text-centered {
@@ -122,7 +121,7 @@
 }
 
 .slider-caption {
-  top: 30% !important;
+  top: 38% !important;
 }
 
 .slider-caption p:first-of-type {
@@ -131,8 +130,17 @@
   font-size: 42px;
 }
 
+#instagram-photos a {
+  display: inline-block;
+  width: 16.6666%;
+}
+
+#instagram-photos a img {
+  width: 100%;
+}
+
 #slider {
-  max-height: 75vh;
+  max-height: 95vh;
 }
 
 #slider .slider-caption p.heading-hero {
@@ -193,8 +201,8 @@
 }
 
 .swiper-slide {
-  background-position: 10% 0% !important;
-  background-size: 160% !important;
+  background-position: 50% 60% !important;
+  background-size: 110% !important;
 }
 
 #browse-market {
@@ -238,6 +246,12 @@
 }
 
 /* RESPONSIVE */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
 @media (max-width: 1000px) {
   .swiper-slide {
     background-position: 15% 10% !important;
@@ -249,6 +263,40 @@
 @media (max-width: 991px) {
   .buttonIcons-grid .ipad-margin h3 {
     margin-bottom: 25px;
+  }
+  #header #top-bar {
+    display: none;
+  }
+  #header #logo {
+    background-color: #444;
+    z-index: 1;
+    height: 65px;
+  }
+  #header #logo img {
+    -webkit-transform: translateY(4px);
+        -ms-transform: translateY(4px);
+            transform: translateY(4px);
+  }
+  #header #primary-menu {
+    z-index: 100;
+    position: absolute;
+    top: 75px;
+    width: 100%;
+    background-color: #444;
+    padding: 0 20px;
+  }
+  #header #primary-menu ul.show {
+    z-index: 100;
+    display: block;
+  }
+  #header #header-wrap .container {
+    width: 100%;
+    padding: 0px;
+  }
+  #header #primary-menu-trigger {
+    top: 8px;
+    left: 10px;
+    z-index: 10;
   }
 }
 

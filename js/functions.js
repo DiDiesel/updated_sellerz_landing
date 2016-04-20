@@ -2730,7 +2730,7 @@ $(document).ready(function() {
 
     // top position relative to the document
 		if ($(window).width() > 991) {
-			var pos = $(id).offset().top-80;
+			var pos = $(id).offset().top-50;
 		}else{
 			var pos = $(id).offset().top;
 		}
@@ -2744,7 +2744,7 @@ $(document).ready(function() {
 		event.preventDefault();
 
 		if ($(window).width() > 991) {
-			var posOff = $("#content").offset().top-80;
+			var posOff = $("#content").offset().top-50;
 		}else{
 			var posOff = $("#content").offset().top;
 		}
@@ -2753,8 +2753,16 @@ $(document).ready(function() {
         scrollTop: posOff
     }, 800);
 	});
+
+	if ($(window).width() < 992) {
+		$( "#primary-menu a" ).click(function() {
+		  $( "#primary-menu ul" ).removeClass("show");
+		});
+	}
+
 });
 
 $(window).resize(function() {
   $('.responsive-slide').slick('resize');
+
 });
