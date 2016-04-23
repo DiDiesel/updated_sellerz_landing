@@ -245,6 +245,71 @@
   padding-bottom: 0;
 }
 
+#content .promoVideo-section {
+  text-align: center;
+  padding: 72px 0;
+  background-color: #F9F9F9;
+}
+
+#content .promoVideo-section .col-md-6 {
+  padding: 0;
+}
+
+#content .promoVideo-section .container {
+  margin: 0 auto;
+  max-width: 1150px;
+}
+
+#content .promoVideo-section .container h2 {
+  margin-bottom: 16px;
+  padding-top: 35px;
+}
+
+#content .promoVideo-section .container span {
+  font-size: 22px;
+  color: #777777;
+  letter-spacing: -0.54px;
+  line-height: 33px;
+  position: relative;
+  padding-bottom: 39px;
+}
+
+#content .promoVideo-section .container span:after {
+  width: 50px;
+  height: 2px;
+  background-color: #333333;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+}
+
+#content .promoVideo-section .container .playButton-RedWhite {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  transition: opacity 0.4s ease;
+}
+
+#content .promoVideo-section .container .playButton-RedWhite img {
+  transition: -webkit-transform 0.4s ease;
+  transition: transform 0.4s ease;
+  transition: transform 0.4s ease, -webkit-transform 0.4s ease;
+}
+
+#content .promoVideo-section .container .playButton-RedWhite:hover {
+  opacity: 0.75;
+}
+
+#content .promoVideo-section .container .playButton-RedWhite:hover img {
+  -webkit-transform: scale(0.98);
+      -ms-transform: scale(0.98);
+          transform: scale(0.98);
+}
+
 /* RESPONSIVE */
 @media (min-width: 1200px) {
   .container {
@@ -258,11 +323,32 @@
     background-size: 220% !important;
     background-attachment: inherit !important;
   }
+  #content .promoVideo-section .container h2 {
+    padding-top: 20px;
+  }
 }
 
 @media (max-width: 991px) {
   .buttonIcons-grid .ipad-margin h3 {
     margin-bottom: 25px;
+  }
+  #content .promoVideo-section .container > div:first-of-type {
+    margin-bottom: 20px;
+  }
+  #content .promoVideo-section .container .playButton-RedWhite {
+    left: 50%;
+  }
+  #content .promoVideo-section .container span {
+    xdisplay: none;
+    font-size: 14px;
+    line-height: 20px;
+    color: #030303;
+  }
+  #content .promoVideo-section {
+    padding: 40px 0;
+  }
+  #content .promoVideo-section .container h2 {
+    padding-top: 0;
   }
   #header #top-bar {
     display: none;
@@ -629,6 +715,9 @@
 @media (max-width: 425px) {
   .buttonIcons-grid .heading-block.center > span {
     font-size: 14px;
+  }
+  #content .promoVideo-section .container .playButton-RedWhite img {
+    max-width: 100px;
   }
   .buttonIcons-grid .ipad-margin h3 {
     margin-bottom: 0;
