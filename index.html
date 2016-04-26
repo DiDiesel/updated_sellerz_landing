@@ -52,6 +52,8 @@
 	<script type="text/javascript" src="include/rs-plugin/js/extensions/revolution.extension.migration.min.js"></script>
 	<script type="text/javascript" src="include/rs-plugin/js/extensions/revolution.extension.parallax.min.js"></script>
 	<script src="//cdn.rawgit.com/noelboss/featherlight/1.4.0/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="https://f.vimeocdn.com/js/froogaloop2.min.js"></script>
+
 
 	<!-- SLIDER REVOLUTION 5.x CSS SETTINGS -->
 	<link rel="stylesheet" type="text/css" href="include/rs-plugin/css/settings.css" media="screen" />
@@ -235,7 +237,7 @@
 
 			<div class="swiper-container swiper-parent">
 				<div class="swiper-wrapper">
-					<div class="swiper-slide dark" style="background-image: url('images/slider/MegaRamRunner.jpg'); background-size: cover; background-position: 50% 50%; background-attachment: fixed;">
+					<div class="swiper-slide dark" style="background-image: url('images/home/hero-image-v3.jpg'); background-size: cover; background-position: 50% 50%; background-attachment: fixed;">
 						<div class="container clearfix">
 							<div class="slider-caption slider-caption-center">
 								<h2 data-caption-animate="fadeInUp"></h2>
@@ -346,16 +348,14 @@
 						video to the right.</span>
 					</div>
 					<div class="col-md-6">
-						<img class="thumbVideo" src="images/home/videoPromo-image.jpg" alt="">
-						<a href="https://www.youtube.com/embed/RETNeRxIEPE?rel=0&amp;controls=0" data-featherlight="iframe" data-iframewidth="500" class="playButton-RedWhite"><img src="images/home/playButtonRedWhite.png" alt="" /></a>
+						<img class="thumbVideo hide-on-desktop" src="images/home/thumb-video-mobile.jpg" alt="">
+						<img class="thumbVideo hide-on-mobile" src="images/home/videoPromo-image-2.jpg" alt="">
+						<a href="#videoPromoLightbox" class="playButton-RedWhite featherLight"><img src="images/home/playButtonRedWhite.png" alt="" /></a>
 					</div>
 				</div>
 			</div>
 
 			<div class="content-wrap">
-
-
-
 				<div class="container clearfix buttonIcons-grid">
 					<div class="heading-block center shop-our-gear">
 						<h2>SHOP OUR GEAR <i class="icon-caret-right" style="color: #DB0000; top:4px;"></i><i class="icon-caret-right" style="color: #DB0000; top:4px;"></i> WIN A TRUCK</h2>
@@ -1162,6 +1162,10 @@
 	<!-- Footer Scripts
 	============================================= -->
 	<script type="text/javascript" src="js/functions.js"></script>
+
+	<div id="videoPromoLightbox">
+
+	</div>
 
 </body>
 </html>
