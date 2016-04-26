@@ -320,10 +320,14 @@ $red: #DA0000;
   background-color: #F9F9F9;
   .col-md-6 {
     padding: 0;
+    &:last-of-type {
+      text-align: left;
+    }
   }
   .container {
     margin: 0 auto;
-    max-width: 1150px;
+    max-width: 1450px;
+    width: 100%;
     h2 {
       margin-bottom: 16px;
       padding-top: 35px;
@@ -343,12 +347,16 @@ $red: #DA0000;
          position: absolute;
          bottom: 0;
          left: 50%;
+         transform: translateX(-50%);
       }
     }
     .thumbVideo {
-      margin: 0 auto;
+
+      max-width: 500px;
 
     }
+
+
     .playButton-RedWhite {
       position: absolute;
       left: 0;
@@ -412,6 +420,12 @@ $red: #DA0000;
     padding: 40px 0;
     .container h2 {
       padding-top: 0;
+    }
+  }
+
+  #content .promoVideo-section .col-md-6 {
+    &:last-of-type {
+      text-align: center;;
     }
   }
 
@@ -861,6 +875,9 @@ $red: #DA0000;
     .playButton-RedWhite img{
       max-width: 100px
     }
+  }
+  #content .promoVideo-section .container .thumbVideo {
+    width: 100%;
   }
 
   .buttonIcons-grid .ipad-margin h3 {

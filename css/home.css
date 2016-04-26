@@ -264,9 +264,14 @@
   padding: 0;
 }
 
+#content .promoVideo-section .col-md-6:last-of-type {
+  text-align: left;
+}
+
 #content .promoVideo-section .container {
   margin: 0 auto;
-  max-width: 1150px;
+  max-width: 1450px;
+  width: 100%;
 }
 
 #content .promoVideo-section .container h2 {
@@ -291,10 +296,13 @@
   position: absolute;
   bottom: 0;
   left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 #content .promoVideo-section .container .thumbVideo {
-  margin: 0 auto;
+  max-width: 500px;
 }
 
 #content .promoVideo-section .container .playButton-RedWhite {
@@ -357,6 +365,9 @@
   }
   #content .promoVideo-section .container h2 {
     padding-top: 0;
+  }
+  #content .promoVideo-section .col-md-6:last-of-type {
+    text-align: center;
   }
   #header #top-bar {
     display: none;
@@ -742,6 +753,9 @@
   }
   #content .promoVideo-section .container .playButton-RedWhite img {
     max-width: 100px;
+  }
+  #content .promoVideo-section .container .thumbVideo {
+    width: 100%;
   }
   .buttonIcons-grid .ipad-margin h3 {
     margin-bottom: 0;
