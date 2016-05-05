@@ -1832,8 +1832,10 @@ var SEMICOLON = SEMICOLON || {};
 		},
 
 		html5Video: function(){
+
 			var videoEl = $('.video-wrap:has(video)');
 			if( videoEl.length > 0 ) {
+
 				videoEl.each(function(){
 					var element = $(this),
 						elementVideo = element.find('video'),
@@ -1843,13 +1845,15 @@ var SEMICOLON = SEMICOLON || {};
 						innerVideoHeight = elementVideo.outerHeight();
 
 					if( innerVideoHeight < outerContainerHeight ) {
-						var videoAspectRatio = innerVideoWidth/innerVideoHeight,
-							newVideoWidth = outerContainerHeight * videoAspectRatio,
-							innerVideoPosition = (newVideoWidth - outerContainerWidth) / 2;
-						elementVideo.css({ 'width': newVideoWidth+'px', 'height': outerContainerHeight+'px', 'left': -innerVideoPosition+'px' });
+						// var videoAspectRatio = innerVideoWidth/innerVideoHeight,
+						// 	newVideoWidth = outerContainerHeight * videoAspectRatio,
+						// 	innerVideoPosition = (newVideoWidth - outerContainerWidth) / 2;
+						// elementVideo.css({ 'width': newVideoWidth+'px', 'height': outerContainerHeight+'px', 'left': -innerVideoPosition+'px' });
 					} else {
-						var innerVideoPosition = (innerVideoHeight - outerContainerHeight) / 2;
-						elementVideo.css({ 'width': innerVideoWidth+'px', 'height': innerVideoHeight+'px', 'top': -innerVideoPosition+'px' });
+
+						// var innerVideoPosition = (innerVideoHeight - outerContainerHeight) / 2;
+						// console.log('width: '+innerVideoWidth+'  height: '+innerVideoHeight+'  top'+innerVideoPosition);
+						// elementVideo.css({ 'width': innerVideoWidth+'px', 'height': innerVideoHeight+'px', 'top': -innerVideoPosition+'px' });
 					}
 
 					if( SEMICOLON.isMobile.any() ) {
