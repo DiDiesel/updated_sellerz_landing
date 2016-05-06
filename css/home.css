@@ -7,6 +7,10 @@
   display: block;
 }
 
+.section .container + .video-wrap {
+  z-index: 0;
+}
+
 #header, #header-wrap, #logo img, #primary-menu ul li a, #primary-menu ul li a div {
   height: 60px;
   transition: height .4s ease, opacity .3s ease;
@@ -24,6 +28,10 @@
 
 #header.dark #top-bar {
   background-color: white;
+}
+
+#top-bar {
+  display: none;
 }
 
 #header {
@@ -126,6 +134,7 @@
 }
 
 #crew .video-wrap video {
+  pointer-events: none;
   position: fixed;
   top: 50%;
   left: 50%;
