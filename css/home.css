@@ -135,7 +135,7 @@
 
 #crew .video-wrap video {
   pointer-events: none;
-  position: fixed;
+  position: absolute;
   top: 50%;
   left: 50%;
   min-width: 100vw;
