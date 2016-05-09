@@ -510,17 +510,17 @@ var SEMICOLON = SEMICOLON || {};
 							removalDelay: 500,
 							callbacks: {
 								open: function(){
-									if( elementAnimateIn != '' ) {
+									if( elementAnimateIn !== '' ) {
 										$(elementTarget).addClass( elementAnimateIn + ' animated' );
 									}
 								},
 								beforeClose: function(){
-									if( elementAnimateOut != '' ) {
+									if( elementAnimateOut !== '' ) {
 										$(elementTarget).removeClass( elementAnimateIn ).addClass( elementAnimateOut );
 									}
 								},
 								afterClose: function() {
-									if( elementAnimateIn != '' || elementAnimateOut != '' ) {
+									if( elementAnimateIn !== '' || elementAnimateOut !== '' ) {
 										$(elementTarget).removeClass( elementAnimateIn + ' ' + elementAnimateOut + ' animated' );
 									}
 									if( element.hasClass('enable-cookie') ) {
@@ -531,7 +531,7 @@ var SEMICOLON = SEMICOLON || {};
 						}, 0);
 					}, Number(elementDelay) );
 
-					if( elementTimeout != '' ) {
+					if( elementTimeout !== '' ) {
 						var to = setTimeout(function() {
 							$.magnificPopup.close();
 						}, Number(elementDelay) + Number(elementTimeout) );
@@ -894,7 +894,7 @@ var SEMICOLON = SEMICOLON || {};
 						elementHeight = element.attr('data-height-xxs');
 
 					if( $body.hasClass('device-xxs') ) {
-						if( elementHeight != '' ) { element.css( 'height', elementHeight ); }
+						if( elementHeight !== '' ) { element.css( 'height', elementHeight ); }
 					}
 				});
 			}
@@ -905,7 +905,7 @@ var SEMICOLON = SEMICOLON || {};
 						elementHeight = element.attr('data-height-xs');
 
 					if( $body.hasClass('device-xs') ) {
-						if( elementHeight != '' ) { element.css( 'height', elementHeight ); }
+						if( elementHeight !== '' ) { element.css( 'height', elementHeight ); }
 					}
 				});
 			}
@@ -916,7 +916,7 @@ var SEMICOLON = SEMICOLON || {};
 						elementHeight = element.attr('data-height-sm');
 
 					if( $body.hasClass('device-sm') ) {
-						if( elementHeight != '' ) { element.css( 'height', elementHeight ); }
+						if( elementHeight !== '' ) { element.css( 'height', elementHeight ); }
 					}
 				});
 			}
@@ -927,7 +927,7 @@ var SEMICOLON = SEMICOLON || {};
 						elementHeight = element.attr('data-height-md');
 
 					if( $body.hasClass('device-md') ) {
-						if( elementHeight != '' ) { element.css( 'height', elementHeight ); }
+						if( elementHeight !== '' ) { element.css( 'height', elementHeight ); }
 					}
 				});
 			}
@@ -938,7 +938,7 @@ var SEMICOLON = SEMICOLON || {};
 						elementHeight = element.attr('data-height-lg');
 
 					if( $body.hasClass('device-lg') ) {
-						if( elementHeight != '' ) { element.css( 'height', elementHeight ); }
+						if( elementHeight !== '' ) { element.css( 'height', elementHeight ); }
 					}
 				});
 			}
@@ -1496,7 +1496,7 @@ var SEMICOLON = SEMICOLON || {};
 					if( noOfOldClasses > 0 ) {
 						var i = 0;
 						for( i=0; i<noOfOldClasses; i++ ) {
-							if( oldClassesArray[i] == 'dark' && onWinLoad == true ) {
+							if( oldClassesArray[i] == 'dark' && onWinLoad === true ) {
 								darkExists = true;
 								break;
 							}
@@ -1588,7 +1588,7 @@ var SEMICOLON = SEMICOLON || {};
 			if(!getIt) { getIt = false; }
 			var portNext = SEMICOLON.portfolio.getNextItem(portPostId);
 			var portPrev = SEMICOLON.portfolio.getPrevItem(portPostId);
-			if(getIt == false) {
+			if(getIt === false) {
 				SEMICOLON.portfolio.closeItem();
 				$portfolioAjaxLoader.fadeIn();
 				var portfolioDataLoader = $('#' + portPostId).attr('data-loader');
@@ -1655,7 +1655,7 @@ var SEMICOLON = SEMICOLON || {};
 		getNextItem: function( portPostId ){
 			var portNext = '';
 			var hasNext = $('#' + portPostId).next();
-			if(hasNext.length != 0) {
+			if(hasNext.length !== 0) {
 				portNext = hasNext.attr('id');
 			}
 			return portNext;
@@ -1664,7 +1664,7 @@ var SEMICOLON = SEMICOLON || {};
 		getPrevItem: function( portPostId ){
 			var portPrev = '';
 			var hasPrev = $('#' + portPostId).prev();
-			if(hasPrev.length != 0) {
+			if(hasPrev.length !== 0) {
 				portPrev = hasPrev.attr('id');
 			}
 			return portPrev;
@@ -1859,8 +1859,8 @@ var SEMICOLON = SEMICOLON || {};
 					if( SEMICOLON.isMobile.any() ) {
 						var placeholderImg = elementVideo.attr('poster');
 
-						if( placeholderImg != '' ) {
-							element.append('<div class="video-placeholder" style="background-image: url('+ placeholderImg +');"></div>')
+						if( placeholderImg !== '' ) {
+							element.append('<div class="video-placeholder" style="background-image: url('+ placeholderImg +');"></div>');
 						}
 					}
 				});
@@ -2040,7 +2040,7 @@ var SEMICOLON = SEMICOLON || {};
 		},
 
 		runCounter: function( counterElement,counterElementComma ){
-			if( counterElementComma == true ) {
+			if( counterElementComma === true ) {
 				counterElement.find('span').countTo({
 					formatter: function (value, options) {
 						value = value.toFixed(options.decimals);
@@ -2428,13 +2428,14 @@ var SEMICOLON = SEMICOLON || {};
 				$('html,body').stop(true).animate({
 					'scrollTop': $( divScrollToAnchor ).offset().top - Number(divScrollOffset)
 				}, Number(divScrollSpeed), divScrollEasing, function(){
-					if( divScrollHighlight != '' ) {
+					if( divScrollHighlight !== '' ) {
+						var t;
 						if( $(divScrollToAnchor).find('.highlight-me').length > 0 ) {
 							$(divScrollToAnchor).find('.highlight-me').animate({'backgroundColor': divScrollHighlight}, 300);
-							var t = setTimeout( function(){ $(divScrollToAnchor).find('.highlight-me').animate({'backgroundColor': 'transparent'}, 300); }, 500 );
+							t = setTimeout( function(){ $(divScrollToAnchor).find('.highlight-me').animate({'backgroundColor': 'transparent'}, 300); }, 500 );
 						} else {
 							$(divScrollToAnchor).animate({'backgroundColor': divScrollHighlight}, 300);
-							var t = setTimeout( function(){ $(divScrollToAnchor).animate({'backgroundColor': 'transparent'}, 300); }, 500 );
+							t = setTimeout( function(){ $(divScrollToAnchor).animate({'backgroundColor': 'transparent'}, 300); }, 500 );
 						}
 					}
 				});
@@ -2718,44 +2719,46 @@ $(document).ready(function() {
 	  ]
 	});
 
-	$(document).on('click', 'a[href^="#"]:not(.featherLight)', function(e) {
-    // target element id
+	$(document).on('click', 'a[href^="#"]:not(.featherLight)', function(event) {
+	  // target element id
 		event.preventDefault();
-    var id = $(this).attr('href');
+	  var id = $(this).attr('href');
+		var pos;
 
-    // target element
-    var $id = $(id);
-    if ($id.length === 0) {
-        return;
-    }
+	  // target element
+	  var $id = $(id);
+	  if ($id.length === 0) {
+	      return;
+	  }
 
-    // prevent standard hash navigation (avoid blinking in IE)
-    e.preventDefault();
 
-    // top position relative to the document
+	  // top position relative to the document
 		if ($(window).width() > 991) {
-			var pos = $(id).offset().top-50;
+			pos = $(id).offset().top-50;
 		}else{
-			var pos = $(id).offset().top;
+			pos = $(id).offset().top;
 		}
 
+	  // animated top scrolling
+	  $('body, html').animate({scrollTop: pos}, 800);
 
-    // animated top scrolling
-    $('body, html').animate({scrollTop: pos}, 800);
-});
+	});
 
 	$("#slider .button-win").click(function(event) {
 		event.preventDefault();
 
+		var posOff;
+
 		if ($(window).width() > 991) {
-			var posOff = $("#content").offset().top-50;
+			posOff = $("#content").offset().top-50;
 		}else{
-			var posOff = $("#content").offset().top;
+			posOff = $("#content").offset().top;
 		}
 
     $('html, body').animate({
         scrollTop: posOff
     }, 800);
+
 	});
 
 	if ($(window).width() < 992) {
@@ -2766,27 +2769,13 @@ $(document).ready(function() {
 
 
 	$('a.featherLight').featherlight({
-	    targetAttr: 'href',
-			afterContent: function(event){
+    targetAttr: 'href',
+		afterContent: function(event){
 
-						//alert();
+			$('#videoPromoLightbox.featherlight-inner').html('<iframe id="videoPromo" src="https://player.vimeo.com/video/163328561?color=DB0000&title=0&byline=0&portrait=0&autoplay=1&api=1&" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
 
-						$('#videoPromoLightbox.featherlight-inner').html('<iframe id="videoPromo" src="https://player.vimeo.com/video/163328561?color=DB0000&title=0&byline=0&portrait=0&autoplay=1&api=1&" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
-						// var iframe = $('.featherlight-inner #videoPromo')[0];
-						//
-						//
-						// // $f == Froogaloop
-						// var player = $f(iframe);
-		    		// player.api("play");
-
-
-			}
+		}
 	});
-
-
-
-
-
 
 });
 
