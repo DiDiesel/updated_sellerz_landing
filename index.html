@@ -1035,27 +1035,6 @@
 
 							</form>
 
-							<script type="text/javascript">
-
-								$("#quick-contact-form").validate({
-									submitHandler: function(form) {
-										$(form).animate({ opacity: 0.4 });
-										$(form).find('.form-process').fadeIn();
-										$(form).ajaxSubmit({
-											target: '#quick-contact-form',
-											success: function() {
-												$(form).animate({ opacity: 1 });
-												$(form).find('.form-process').fadeOut();
-												$(form).find('.form-control').val('');
-												$('#quick-contact-form-result').attr('data-notify-msg', $('#quick-contact-form-result').html()).html('');
-												SEMICOLON.widget.notifications($('#quick-contact-form-result'));
-											}
-										});
-									}
-								});
-
-							</script>
-
 						</div>
 
 					</div>
@@ -1088,27 +1067,6 @@
 								<button type="submit" id="quick-contact-form-submit" name="quick-contact-form-submit" class="btn btn-danger nomargin" value="submit">Send Email</button>
 
 							</form> -->
-
-							<script type="text/javascript">
-
-								$("#quick-contact-form").validate({
-									submitHandler: function(form) {
-										$(form).animate({ opacity: 0.4 });
-										$(form).find('.form-process').fadeIn();
-										$(form).ajaxSubmit({
-											target: '#quick-contact-form-result',
-											success: function() {
-												$(form).animate({ opacity: 1 });
-												$(form).find('.form-process').fadeOut();
-												$(form).find('.form-control').val('');
-												$('#quick-contact-form-result').attr('data-notify-msg', $('#quick-contact-form-result').html()).html('');
-												SEMICOLON.widget.notifications($('#quick-contact-form-result'));
-											}
-										});
-									}
-								});
-
-							</script>
 
 						</div>
 
