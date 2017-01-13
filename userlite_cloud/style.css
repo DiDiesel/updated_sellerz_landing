@@ -436,6 +436,14 @@ span.middot {
 	overflow: hidden;
 }
 
+.sectionlight {
+	position: relative;
+	margin: 60px 0;
+	padding: 60px 0;
+	background-color: #FFF;
+	overflow: hidden;
+}
+
 .parallax {
 	background-color: transparent;
 	background-attachment: fixed;
@@ -13237,4 +13245,11 @@ body:not(.no-transition) #wrapper,
 
 .play-image-slider {
 	display: none;
+}
+
+.premier {
+	background-color: #F9F9F9;
+}
+.portfoliobg {
+	background-color: #FFF;
 }
